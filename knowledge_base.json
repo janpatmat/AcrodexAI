@@ -35,7 +35,15 @@
     {
       "question": "What is your name?",
       "answer": "My name is Bot"
+    },
+    {
+      "question": "Tell me about yourself",
+      "answer": "I am a very basic AI that does excel creation"
+    },
+    {
+      "question": "Tell me",
+      "answer": "Tell you what?"
     }
   ],
-  "commands": "hi"
+  "commands": ["create" , "create a sheet"]
 }

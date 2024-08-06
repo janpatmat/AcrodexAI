@@ -25,11 +25,15 @@ def createsheet():
         genSheet()
     except:
         print("Bot: Error occured Terminating process")
-        
+
+
+
 
 def chat_bot():
     knowledge_base: dict = load_knowledge_base('knowledge_base.json')
-
+    with open('knowledge_base.json', 'r') as file:
+        commandInput = json.load(file)
+   
     while True:
         user_input: str = input('You: ')
 
@@ -41,8 +45,9 @@ def chat_bot():
         if best_match:
             answer: str = get_answer_for_question(best_match, knowledge_base)
             print(f'Bot: {answer}')
-        elif user_input.lower() == 'command':
+        elif user_input.lower() in commandInput["commands"]:
             createsheet()
+           
         else:
             print('Bot: Not part of my coding, still unteached. What is practical response?: ')
             new_answer: str = input("Answer or type skip: ")
