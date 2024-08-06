@@ -1,5 +1,6 @@
 import json
 from difflib import get_close_matches
+from  finalproj import generateSheet as genSheet
 
 def load_knowledge_base(file_path: str) -> dict:
     with open(file_path, 'r') as file:
@@ -18,6 +19,12 @@ def get_answer_for_question(question: str, knowledge_base: dict) -> str | None:
     for q in knowledge_base["questions"]:
         if q["question"] == question:
             return q["answer"]
+
+def createsheet():
+    try:
+        genSheet()
+    except:
+        print("Bot: Error occured Terminating process")
         
 
 def chat_bot():
@@ -35,7 +42,7 @@ def chat_bot():
             answer: str = get_answer_for_question(best_match, knowledge_base)
             print(f'Bot: {answer}')
         elif user_input.lower() == 'command':
-            print("What is your command?")
+            createsheet()
         else:
             print('Bot: Not part of my coding, still unteached. What is practical response?: ')
             new_answer: str = input("Answer or type skip: ")

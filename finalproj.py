@@ -1,22 +1,29 @@
 from openpyxl import workbook, load_workbook
 
-print("Print kag shit lods?: Y/N")
+def generateSheet():
+    print("Bot: Would you like to create a sheet?: Y/N")
 
-x = input()
+    x = input()
 
-if x == 'Y' or x == 'y':
+    if x == 'Y' or x == 'y':
+            
+        nwb = load_workbook('final.xlsx')
+        ws = nwb.active
+        print("Bot: Add a name ")
+        name = input("Name: ")
+        print("Bot: Add an age ")
+        age = input("Age: ")
+        print("Bot: Add an address ")
+        address = input("Address: ")
+
+        ws.append(['Name' , 'Age', 'Address'])
+        ws.append([name , age, address])
+        nwb.save('final.xlsx')
+        print("Bot: Process finished")
+    else:
+        print("Bot: Terminating process")
+
+
         
-    nwb = load_workbook('final.xlsx')
-    ws = nwb.active
-    print("Namae wa?: ")
-    name = input()
-    print("Edad?: ")
-    age = input()
 
-    ws.append(['Name' , 'Age', 'Address'])
-    ws.append([name , age, "Some random address"])
-    nwb.save('final.xlsx')
-    print("Human na lods")
-else:
-    print("aw")
 
