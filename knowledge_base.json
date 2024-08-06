@@ -1,0 +1,41 @@
+{
+  "questions": [
+    {
+      "question": "Hello",
+      "answer": "hi"
+    },
+    {
+      "question": "How are you",
+      "answer": "IM ok"
+    },
+    {
+      "question": "hello there",
+      "answer": "hi there"
+    },
+    {
+      "question": "ok",
+      "answer": "ok"
+    },
+    {
+      "question": "Is that ok",
+      "answer": "yes"
+    },
+    {
+      "question": "really?",
+      "answer": "yeah"
+    },
+    {
+      "question": "hi",
+      "answer": "Hello"
+    },
+    {
+      "question": "Hi",
+      "answer": "Hello"
+    },
+    {
+      "question": "What is your name?",
+      "answer": "My name is Bot"
+    }
+  ],
+  "commands": "hi"
+}
